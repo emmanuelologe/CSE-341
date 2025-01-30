@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 app.use(express.json());
 
-const contactRoutes = require("./contacts.js");
+const contactRoutes = require("./routes/contacts.js");
 
 app.use("/contacts", contactRoutes);
 
