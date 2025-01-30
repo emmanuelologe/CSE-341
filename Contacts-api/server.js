@@ -10,7 +10,7 @@ const contactRoutes = require("./routes/contacts.js");
 app.use("/contacts", contactRoutes);
 
 const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger.json");
+const swaggerDocument = require("./routes/swagger.json");
 
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
