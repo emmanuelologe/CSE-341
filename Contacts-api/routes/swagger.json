@@ -1,0 +1,71 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Contacts API",
+      "description": "API for managing contacts",
+      "version": "1.0.0"
+    },
+    "host": "your-render-url",
+    "schemes": ["https"],
+    "paths": {
+      "/contacts": {
+        "get": {
+          "summary": "Get all contacts",
+          "responses": {
+            "200": {
+              "description": "A list of contacts"
+            }
+          }
+        },
+        "post": {
+          "summary": "Create a new contact",
+          "parameters": [{
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Contact"
+            }
+          }],
+          "responses": {
+            "201": {
+              "description": "Contact created"
+            }
+          }
+        }
+      },
+      "/contacts/{id}": {
+        "get": {
+          "summary": "Get a single contact",
+          "parameters": [{ "name": "id", "in": "path", "required": true, "type": "string" }],
+          "responses": {
+            "200": { "description": "Contact details" },
+            "404": { "description": "Contact not found" }
+          }
+        },
+        "put": {
+          "summary": "Update a contact",
+          "parameters": [{ "name": "id", "in": "path", "required": true, "type": "string" }],
+          "responses": { "200": { "description": "Contact updated" } }
+        },
+        "delete": {
+          "summary": "Delete a contact",
+          "parameters": [{ "name": "id", "in": "path", "required": true, "type": "string" }],
+          "responses": { "200": { "description": "Contact deleted" } }
+        }
+      }
+    },
+    "definitions": {
+      "Contact": {
+        "type": "object",
+        "properties": {
+          "firstName": { "type": "string" },
+          "lastName": { "type": "string" },
+          "email": { "type": "string" },
+          "favoriteColor": { "type": "string" },
+          "birthday": { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+  
