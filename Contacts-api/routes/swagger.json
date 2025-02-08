@@ -5,7 +5,7 @@
       "description": "API for managing contacts",
       "version": "1.0.0"
     },
-    "host": "your-render-url",
+    "host": "https://cse-341-pqea.onrender.com",
     "schemes": ["https"],
     "paths": {
       "/contacts": {
