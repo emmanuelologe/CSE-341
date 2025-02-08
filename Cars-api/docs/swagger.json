@@ -7,7 +7,7 @@
     },
     "servers": [
       {
-        "url": "https://cse-341-pqea.onrender.com",
+        "url": "http://localhost:5000/api-docs",
         "description": "Render Deployment"
       }
     ],
