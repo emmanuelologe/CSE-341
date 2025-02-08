@@ -7,8 +7,8 @@
     },
     "servers": [
       {
-        "url": "http://localhost:5000",
-        "description": "Local server"
+        "url": "https://cse-341-pqea.onrender.com",
+        "description": "Render Deployment"
       }
     ],
     "paths": {
